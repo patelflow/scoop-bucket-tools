@@ -10,5 +10,5 @@
       "hash": "d88a36387fe173012e2abf0d57df91676e39b32224493b2ea8e5e73a87e09511"
     }
   },
-  "persist": ["config.json"]
+  "persist": ["php-spawner.json"]
 }
