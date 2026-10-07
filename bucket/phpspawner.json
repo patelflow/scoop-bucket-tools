@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "description": "My App",
+  "homepage": "https://cnb.cool/jian23/php-spawner",
+  "license": "MIT",
+  "bin": "php-spawner.exe",
+  "architecture": {
+    "64bit": {
+      "url": "https://cnb.cool/jian23/php-spawner/-/releases/download/v0.1.0/php-spawner-v0.1.0-win-x64.zip",
+      "hash": "d88a36387fe173012e2abf0d57df91676e39b32224493b2ea8e5e73a87e09511"
+    }
+  }
+}
