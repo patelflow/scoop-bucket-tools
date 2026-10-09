@@ -1,4 +1,4 @@
-name: Update Scoop Manifests
+name: Update phpspawner Manifest
 
 on:
   schedule:
@@ -6,12 +6,12 @@ on:
 
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: windows-latest
-
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout bucket
