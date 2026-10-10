@@ -3,12 +3,7 @@
   "description": "php cgi spawner",
   "homepage": "https://cnb.cool/jian23/php-spawner",
   "license": "MIT",
-  "bin": [
-    [
-      "php-spawner.exe",
-      "phpspawner"
-    ]
-  ],
+  "bin": "php-spawner.exe",
   "architecture": {
     "64bit": {
       "url": "https://cnb.cool/jian23/php-spawner/-/releases/download/v0.1.8/php-spawner-v0.1.8-win-x64.zip",
