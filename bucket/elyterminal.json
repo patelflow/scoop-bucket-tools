@@ -5,8 +5,8 @@
   "license": "MIT",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/ELY-Open-Source/ELYTerminal/releases/download/v$version/ELYTerminal-$version-windows-x86_64.zip",
-      "hash": "127B7F1B1CB9D12D5D7CB33A79625FCF4063C6F43429E887A95B0E82547C13CA"
+      "url": "https://github.com/ELY-Open-Source/ELYTerminal/releases/download/v0.1.7/ELYTerminal-0.1.7-windows-x86_64.zip",
+      "hash": "127b7f1b1cb9d12d5d7cb33a79625fcf4063c6f43429e887a95b0e82547c13ca"
     }
   },
   "bin": "elyterminal.exe",
