@@ -1,0 +1,33 @@
+{
+    "version": "0.6.13",
+    "description": "A terminal on GPUI and Ely components.",
+    "homepage": "https://github.com/ELY-Open-Source/ELYTerminal",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v0.6.13/Shazao-v0.6.13-win64.zip",
+            "hash": "ea1de9ba07f389aa62a7cf281dff144f63805d98f0637a69e41f5a75e56bf16d"
+        }
+    },
+    "bin": "Shazao-markdown.exe",
+    "shortcuts": [
+        [
+            "Shazao-markdown.exe",
+            "Shazao-markdown"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/yakoye/Shazao-markdown"
+    },
+    "persist": [
+        "Shazao.ini",
+        "Shazao-shortcuts.ini"
+    ],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v$version/Shazao-v$version-win64.zip"
+            }
+        }
+    }
+}
