@@ -10,8 +10,15 @@
         }
     },
     "bin": "velotype.exe",
-    "shortcuts": [["velotype.exe", "velotype"]],
-    "persist": [],
+    "shortcuts": [
+        [
+            "velotype.exe",
+            "velotype"
+        ]
+    ],
+    "persist": [
+        
+    ],
     "checkver": {
         "github": "https://github.com/manyougz/velotype"
     },
