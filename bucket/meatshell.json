@@ -11,8 +11,16 @@
         }
     },
     "bin": "meatshell.exe",
-    "shortcuts": [["meatshell.exe", "MeatShell"]],
-    "persist": ["config", "log"],
+    "shortcuts": [
+        [
+            "meatshell.exe",
+            "MeatShell"
+        ]
+    ],
+    "persist": [
+        "config",
+        "log"
+    ],
     "checkver": {
         "github": "https://github.com/yituorou/meatshell"
     },
