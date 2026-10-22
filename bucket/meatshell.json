@@ -1,29 +1,26 @@
 {
-    "version": "0.7.9",
-    "description": "A lightweight SSH and terminal client",
-    "homepage": "https://github.com/yituorou/meatshell",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/yituorou/meatshell/releases/download/v0.7.9/meatshell-v0.7.9-windows-x86_64.zip",
-            "hash": "b7618d8b34ac03d0e810914b5db42b26209833e948250c21bffacb70f7724d68"
-        }
-    },
-    "bin": "meatshell.exe",
-    "shortcuts": [
-        [
-            "meatshell.exe",
-            "MeatShell"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/yituorou/meatshell"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/yituorou/meatshell/releases/download/v$version/meatshell-v$version-windows-x86_64.zip"
-            }
-        }
+  "version": "0.7.9",
+  "description": "A lightweight SSH and terminal client",
+  "homepage": "https://github.com/yituorou/meatshell",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/yituorou/meatshell/releases/download/v0.7.9/meatshell-v0.7.9-windows-x86_64.zip",
+      "hash": "b7618d8b34ac03d0e810914b5db42b26209833e948250c21bffacb70f7724d68",
+      "extract_dir": "meatshell-v0.7.9-windows-x86_64"
     }
+  },
+  "bin": "meatshell.exe",
+  "shortcuts": [["meatshell.exe", "MeatShell"]],
+  "checkver": {
+    "github": "https://github.com/yituorou/meatshell"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/yituorou/meatshell/releases/download/v$version/meatshell-v$version-windows-x86_64.zip",
+        "extract_dir": "meatshell-v$version-windows-x86_64"
+      }
+    }
+  }
 }
