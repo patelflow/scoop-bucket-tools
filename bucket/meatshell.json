@@ -1,6 +1,6 @@
 {
     "version": "0.7.9",
-    "description": "A terminal on GPUI and Ely components.",
+    "description": "A lightweight SSH and terminal client",
     "homepage": "https://github.com/yituorou/meatshell",
     "license": "MIT",
     "architecture": {
@@ -13,16 +13,12 @@
     "shortcuts": [
         [
             "meatshell.exe",
-            "meatshell"
+            "MeatShell"
         ]
     ],
     "checkver": {
         "github": "https://github.com/yituorou/meatshell"
     },
-    "persist": [
-        "config",
-        "log"
-    ],
     "autoupdate": {
         "architecture": {
             "64bit": {
