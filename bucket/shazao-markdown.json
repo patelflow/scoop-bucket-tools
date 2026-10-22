@@ -1,25 +1,25 @@
 {
-  "version": "0.6.13",
-  "description": "Shazao（沙枣） Windows 上的所见即所得 Markdown 编辑器",
-  "homepage": "https://github.com/yakoye/Shazao-markdown",
-  "license": "MIT",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v0.6.13/Shazao-v0.6.13-win64.zip",
-      "hash": "ea1de9ba07f389aa62a7cf281dff144f63805d98f0637a69e41f5a75e56bf16d"
-    }
-  },
-  "bin": "Shazao-markdown.exe",
-  "shortcuts": [["Shazao-markdown.exe", "Shazao-markdown"]],
-  "checkver": {
-    "github": "https://github.com/yakoye/Shazao-markdown"
-  },
-  "persist": [],
-  "autoupdate": {
+    "version": "0.6.13",
+    "description": "Shazao（沙枣） Windows 上的所见即所得 Markdown 编辑器",
+    "homepage": "https://github.com/yakoye/Shazao-markdown",
+    "license": "MIT",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v$version/Shazao-v$version-win64.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v0.6.13/Shazao-v0.6.13-win64.zip",
+            "hash": "ea1de9ba07f389aa62a7cf281dff144f63805d98f0637a69e41f5a75e56bf16d"
+        }
+    },
+    "bin": "Shazao-markdown.exe",
+    "shortcuts": [["Shazao-markdown.exe", "Shazao-markdown"]],
+    "checkver": {
+        "github": "https://github.com/yakoye/Shazao-markdown"
+    },
+    "persist": [],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v$version/Shazao-v$version-win64.zip"
+            }
+        }
     }
-  }
 }
