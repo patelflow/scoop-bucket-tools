@@ -20,8 +20,7 @@
         "github": "https://github.com/yakoye/Shazao-markdown"
     },
     "persist": [
-        ["Shazao.ini", "Shazao.ini"],
-        ["Shazao-shortcuts.ini", "Shazao-shortcuts.ini"]
+        
     ],
     "autoupdate": {
         "architecture": {
