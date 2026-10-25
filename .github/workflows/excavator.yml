@@ -1,0 +1,26 @@
+name: Excavator
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 北京时间每天 00:00（UTC 16:00）；GitHub 计划任务高峰期可能有数分钟延迟
+    - cron: '0 16 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  excavate:
+    name: Excavate
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 已是最新版本的包不产生提交
+          SKIP_UPDATED: '1'
