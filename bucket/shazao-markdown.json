@@ -1,12 +1,12 @@
 {
-    "version": "0.6.15",
+    "version": "0.6.17",
     "description": "Shazao（沙枣） Windows 上的所见即所得 Markdown 编辑器",
     "homepage": "https://github.com/yakoye/Shazao-markdown",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v0.6.15/Shazao-v0.6.15-win64.zip",
-            "hash": "9674c8d9a48313c55afa9652fde9e3cfe4b170953dd3aa9a5d5757c3e5e5e5a4"
+            "url": "https://github.com/yakoye/Shazao-markdown/releases/download/v0.6.17/Shazao-v0.6.17-win64.zip",
+            "hash": "1696c08b905e882496ccb3e1e14db1141d1be200f7f7a0d710c787601705bb78"
         }
     },
     "bin": "Shazao-markdown.exe",
