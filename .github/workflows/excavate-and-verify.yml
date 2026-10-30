@@ -1,0 +1,61 @@
+name: Excavate and Verify Hashes
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 北京时间每天 00:23（UTC 16:23）；非整点触发，缓解 GitHub 计划任务整点排队延迟
+    - cron: '23 16 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  excavate:
+    name: Excavate and verify
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 第一步：常规版本更新（checkver + autoupdate，更新版本号 / URL / 哈希）
+      - name: Excavate
+        uses: ScoopInstaller/GithubActions@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 已是最新版本的包不产生更新日志
+          SKIP_UPDATED: '1'
+
+      # 第二步：逐包复核真实下载文件的哈希，兜底“版本号不变但上游覆盖了同名 asset”
+      # 导致的哈希漂移。脚本为 fail-closed：下载失败 / 类型可疑时一律跳过，绝不写坏哈希。
+      - name: Verify and refresh hashes
+        shell: pwsh
+        run: |
+          Get-ChildItem "$env:GITHUB_WORKSPACE\bucket" -Filter *.json |
+            Sort-Object BaseName |
+            ForEach-Object {
+              Write-Host "::group::$($_.BaseName)"
+              & "$env:GITHUB_WORKSPACE\scripts\verify-hashes.ps1" -App $_.BaseName
+              Write-Host "::endgroup::"
+            }
+
+      # 第三步：仅当哈希确有变化时，按包单独提交并推送
+      - name: Commit refreshed hashes
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          $changed = git diff --name-only --diff-filter=M -- bucket
+          if (-not $changed) {
+            Write-Host "No hash drift detected."
+            exit 0
+          }
+
+          foreach ($file in $changed) {
+            $app = [IO.Path]::GetFileNameWithoutExtension($file)
+            git add -- $file
+            git commit -m "${app}: Refresh hash"
+          }
+
+          git push
