@@ -1,0 +1,32 @@
+{
+    "version": "1.11.2",
+    "description": "All-in-one terminal covering 30+ protocols — SSH, RDP, SFTP, databases, Kubernetes and more. With a built-in AI Agent that runs multi-turn shell commands autonomously",
+    "homepage": "https://github.com/ys-ll/uniterm",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ys-ll/uniterm/releases/download/v1.11.2/uniterm-windows-amd64-portable-v1.11.2.zip",
+            "hash": "761336fef7ae314c74425d601f5c1fe4e254dc9964e133c3b374f4f97840a8d2"
+        }
+    },
+    "bin": "uniTerm.exe",
+    "shortcuts": [
+        [
+            "uniTerm.exe",
+            "uniTerm"
+        ]
+    ],
+    "persist": [
+        
+    ],
+    "checkver": {
+        "github": "https://github.com/ys-ll/uniterm"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ys-ll/uniterm/releases/download/v$version/uniterm-windows-amd64-portable-v$version.zip"
+            }
+        }
+    }
+}
