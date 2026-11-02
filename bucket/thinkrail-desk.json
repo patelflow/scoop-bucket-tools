@@ -10,13 +10,8 @@
         }
     },
     "installer": {
-        "script": "$($env:SCOOP)\\apps\\thinkrail\\current\\installer\\ThinkRail-Setup.exe",
-        "pre_install": [
-            "Write-Host '正在运行 ThinkRail 安装程序...' -ForegroundColor Green",
-            "Start-Process -FilePath 'ThinkRail-Setup.exe' -ArgumentList '-s' -Wait",
-            "Write-Host 'ThinkRail 安装已完成！' -ForegroundColor Green"
-        ],
-        "post_install": "Write-Host 'ThinkRail 安装成功！请在桌面上查找 ThinkRail 图标启动。' -ForegroundColor Green"
+        "file": "ThinkRail-Setup.exe",
+        "keep": true
     },
     "checkver": {
         "github": "https://github.com/JetBrains/thinkrail"
