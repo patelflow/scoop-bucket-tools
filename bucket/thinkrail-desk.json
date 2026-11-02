@@ -10,7 +10,7 @@
         }
     },
     "installer": {
-        "script": "ThinkRail-Setup.exe",
+        "script": "$($env:SCOOP)\\apps\\thinkrail\\current\\installer\\ThinkRail-Setup.exe",
         "pre_install": [
             "Write-Host '正在运行 ThinkRail 安装程序...' -ForegroundColor Green",
             "Start-Process -FilePath 'ThinkRail-Setup.exe' -ArgumentList '-s' -Wait",
