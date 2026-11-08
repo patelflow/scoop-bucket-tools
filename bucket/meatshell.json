@@ -1,13 +1,13 @@
 {
-    "version": "0.8.1",
+    "version": "0.8.2",
     "description": "A lightweight SSH and terminal client",
     "homepage": "https://github.com/yituorou/meatshell",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/yituorou/meatshell/releases/download/v0.8.1/meatshell-v0.8.1-windows-x86_64.zip",
-            "hash": "da6a4cceff2671f2bb758f724c4a620064d1e2bc2f144e6e8966ab2d81f5ea3c",
-            "extract_dir": "meatshell-v0.8.1-windows-x86_64"
+            "url": "https://github.com/yituorou/meatshell/releases/download/v0.8.2/meatshell-v0.8.2-windows-x86_64.zip",
+            "hash": "ef1f8a989d22744ef7f7c23115cf11d983e030b6d67959b81252c8f7074203df",
+            "extract_dir": "meatshell-v0.8.2-windows-x86_64"
         }
     },
     "bin": "meatshell.exe",
