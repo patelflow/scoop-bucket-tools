@@ -6,16 +6,12 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/zhitongblog/unterm/releases/download/v0.71.22/Unterm-windows-x64-v0.71.22.zip",
-            "hash": "20eef1d270c5a898c34b9386c84789822b48ed513f67ccf09172ce53f004bc38"
+            "hash": "20eef1d270c5a898c34b9386c84789822b48ed513f67ccf09172ce53f004bc38",
+            "extract_dir": "unterm-release-stage\\unterm"
         }
     },
     "bin": "unterm.exe",
-    "shortcuts": [
-        [
-            "unterm.exe",
-            "unterm"
-        ]
-    ],
+    "shortcuts": [["unterm.exe", "unterm"]],
     "persist": "defaults",
     "checkver": {
         "github": "https://github.com/zhitongblog/unterm"
@@ -23,7 +19,8 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/zhitongblog/unterm/releases/download/v$version/Unterm-windows-x64-v$version.zip"
+                "url": "https://github.com/zhitongblog/unterm/releases/download/v$version/Unterm-windows-x64-v$version.zip",
+                "extract_dir": "unterm-release-stage\\unterm"
             }
         }
     }
